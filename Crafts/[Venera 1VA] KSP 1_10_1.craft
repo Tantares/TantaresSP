@@ -2,11 +2,11 @@ ship = [Venera 1VA] KSP 1.10.1
 version = 1.10.1
 description = 
 type = VAB
-size = 0.796080887,1.55006981,1.12156248
+size = 0.797088861,1.52365303,1.12019765
 steamPublishedFileId = 0
-persistentId = 1000850246
+persistentId = 3939710962
 rot = 0,0,0,0
-missionFlag = Squad/Flags/default
+missionFlag = Tantares/flags/nation
 vesselType = Debris
 OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
@@ -14,9 +14,9 @@ OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
 PART
 {
-	part = 1mv.avionics.s0.1_4294383144
+	part = 1mv.sensor.visible.light.camera.s0.1_4294261720
 	partName = Part
-	persistentId = 1632235240
+	persistentId = 2155233553
 	pos = 0,15,0
 	attPos = 0,0,0
 	attPos0 = 0,15,0
@@ -38,26 +38,171 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = 1mv.sensor.visible.light.camera.s0.1_4294382804
-	link = 1mv.solar.srf.1_4294382416
-	link = 1mv.solar.srf.1_4294380732
-	link = 1mv.high.gain.antenna.srf.1_4294379218
-	link = 1mv.sensor.magnetometer.srf.1_4294378760
-	link = 1mv.sensor.ion.trap.srf.1_4294378506
-	link = 1mv.sensor.ion.trap.srf.1_4294378320
-	link = 1mv.sensor.ion.trap.srf.1_4294378134
-	link = 1mv.sensor.gravimeter.srf.1_4294377940
-	link = 1mv.sensor.accelerometer.srf.1_4294377320
-	link = sp.rcs.srf.2_4294374098
-	link = sp.rcs.srf.2_4294373918
-	link = sp.rcs.srf.2_4294373874
-	link = sp.rcs.srf.2_4294373830
-	link = sp.rcs.linear.srf.1_4294373146
-	link = sp.rcs.linear.srf.1_4294372582
-	link = sp.rcs.linear.srf.1_4294372542
-	link = sp.rcs.linear.srf.1_4294372502
+	link = 1mv.avionics.s0.1_4294261290
+	link = 1mv.sensor.cosmic.ray.detector.srf.1_4294256194
+	link = 1mv.sensor.accelerometer.srf.1_4294255424
+	attN = bottom,1mv.avionics.s0.1_4294261290_0|-0.337500006|0_0|-1|0_0|-0.337500006|0_0|-1|0
+	attN = top,Null_0_0|0.337500006|0_0|1|0_0|0.337500006|0_0|1|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		cooldownToGo = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ResetAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleNeptuneCamera
+		isEnabled = True
+		cameraTransformName = cameraTransform
+		cameraType = FULL_COLOUR
+		cameraFieldOfView = 60
+		cameraHorizontalResolution = 128
+		cameraVerticalResolution = 128
+		cameraHasErrors = True
+		cameraErrorRate = 5
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActionCaptureFullColourImage
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActionCaptureRedImage
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActionCaptureGreenImage
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActionCaptureBlueImage
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActionCaptureGreyscaleImage
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = 1mv.avionics.s0.1_4294261290
+	partName = Part
+	persistentId = 694584214
+	pos = 0,14.375,0
+	attPos = 0,0,0
+	attPos0 = 0,-0.625,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = 1mv.sensor.ion.trap.srf.1_4294260912
+	link = 1mv.sensor.ion.trap.srf.1_4294260720
+	link = 1mv.sensor.ion.trap.srf.1_4294260532
+	link = 1mv.sensor.magnetometer.srf.1_4294260334
+	link = 1mv.high.gain.antenna.srf.1_4294259842
+	link = 1mv.solar.srf.1_4294259246
+	link = 1mv.solar.srf.1_4294258866
+	link = 1mv.sensor.thermometer.srf.1_4294256446
+	link = sp.rcs.srf.2_4294254082
+	link = sp.rcs.srf.2_4294253896
+	link = sp.rcs.srf.2_4294253850
+	link = sp.rcs.srf.2_4294253804
+	link = sp.rcs.linear.srf.1_4294252876
+	link = sp.rcs.linear.srf.1_4294252832
+	link = sp.rcs.linear.srf.1_4294252790
+	link = sp.rcs.linear.srf.1_4294252748
 	attN = bottom,Null_0_0|-0.287499994|0_0|-1|0_0|-0.287499994|0_0|-1|0
-	attN = top,1mv.sensor.visible.light.camera.s0.1_4294382804_0|0.287499994|0_0|1|0_0|0.287499994|0_0|1|0
+	attN = top,1mv.sensor.visible.light.camera.s0.1_4294261720_0|0.287499994|0_0|1|0_0|0.287499994|0_0|1|0
 	EVENTS
 	{
 	}
@@ -229,6 +374,65 @@ PART
 	}
 	MODULE
 	{
+		name = kOSProcessor
+		isEnabled = True
+		bootFile = None
+		diskSpace = 10000
+		baseDiskSpace = 10000
+		baseModuleMass = 0
+		additionalCost = 0
+		MaxPartId = 100
+		RequiredPower = 0.0500000007
+		stagingEnabled = True
+		activated = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			Deactivate
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			Toggle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			TogglePower
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleTripLogger
 		isEnabled = True
 		stagingEnabled = True
@@ -282,15 +486,15 @@ PART
 }
 PART
 {
-	part = 1mv.sensor.visible.light.camera.s0.1_4294382804
+	part = 1mv.sensor.ion.trap.srf.1_4294260912
 	partName = Part
-	persistentId = 1982854216
-	pos = 0,15.625,0
+	persistentId = 1945885263
+	pos = 0.155798867,14.2212534,0.269851536
 	attPos = 0,0,0
-	attPos0 = 0,0.625,0
-	rot = 0,0,0,1
+	attPos0 = 0.155798867,-0.153746605,0.269851536
+	rot = 0,0.965925872,0,-0.258819073
 	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
+	attRot0 = 0,0.965925872,0,-0.258819073
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -301,14 +505,12 @@ PART
 	sidx = -1
 	sqor = -1
 	sepI = -1
-	attm = 0
+	attm = 1
 	sameVesselCollision = False
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = 1mv.sensor.cosmic.ray.detector.srf.1_4294377740
-	attN = bottom,1mv.avionics.s0.1_4294383144_0|-0.337500006|0_0|-1|0_0|-0.337500006|0_0|-1|0
-	attN = top,Null_0_0|0.337500006|0_0|1|0_0|0.337500006|0_0|1|0
+	srfN = srfAttach,1mv.avionics.s0.1_4294261290,collider,0|0|0,0|0|-1,0|0|0
 	EVENTS
 	{
 	}
@@ -363,119 +565,10 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleTantaresCamera
+		name = KOSNameTag
 		isEnabled = True
+		nameTag = 
 		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionCaptureImage
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = 1mv.solar.srf.1_4294382416
-	partName = Part
-	persistentId = 1257001033
-	pos = 0.298533797,14.9945726,0.0799918845
-	attPos = 0,0,0
-	attPos0 = 0.298533797,-0.00542736053,0.0799918845
-	rot = -0.560985565,0.560985565,0.430459291,-0.430459291
-	attRot = 0,0,-0.707106709,0.707106709
-	attRot0 = -0.560985565,0.560985565,0.430459291,-0.430459291
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	srfN = srfAttach,1mv.avionics.s0.1_4294383144,collider,0|0|0,0|0|-1,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleDeployableSolarPanel
-		isEnabled = True
-		efficiencyMult = 1
-		launchUT = -1
-		currentRotation = (0.707106829, 0, 0, -0.707106829)
-		storedAnimationTime = 0
-		storedAnimationSpeed = 1
-		deployState = RETRACTED
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ExtendPanelsAction
-			{
-				actionGroup = Custom01
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ExtendAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			RetractAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		selectedVariant = variant4
 		EVENTS
 		{
 		}
@@ -489,120 +582,15 @@ PART
 }
 PART
 {
-	part = 1mv.solar.srf.1_4294380732
+	part = 1mv.sensor.ion.trap.srf.1_4294260720
 	partName = Part
-	persistentId = 2874984145
-	pos = -0.298533797,14.9945726,0.0799918845
+	persistentId = 1958498000
+	pos = 0.155646279,14.5194426,0.269587249
 	attPos = 0,0,0
-	attPos0 = -0.298533797,-0.00542736053,0.0799918845
-	rot = 0.560985565,0.560985565,0.430459291,0.430459291
-	attRot = 0,0,-0.707106709,0.707106709
-	attRot0 = 0.560985565,0.560985565,0.430459291,0.430459291
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	srfN = srfAttach,1mv.avionics.s0.1_4294383144,collider,0|0|0,0|0|-1,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleDeployableSolarPanel
-		isEnabled = True
-		efficiencyMult = 1
-		launchUT = -1
-		currentRotation = (0.707106829, 0, 0, -0.707106829)
-		storedAnimationTime = 0
-		storedAnimationSpeed = -10
-		deployState = RETRACTED
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ExtendPanelsAction
-			{
-				actionGroup = Custom01
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ExtendAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			RetractAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		selectedVariant = variant2
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = 1mv.high.gain.antenna.srf.1_4294379218
-	partName = Part
-	persistentId = 2819248710
-	pos = -2.68650684E-08,15.0105658,-0.307300568
-	attPos = 0,0,0
-	attPos0 = -2.68650684E-08,0.0105657578,-0.307300568
-	rot = 0,0,0,-1
+	attPos0 = 0.155646279,0.144442558,0.269587249
+	rot = 0,0.965925813,0,-0.258819073
 	attRot = 0,0,0,1
-	attRot0 = 0,0,0,-1
+	attRot0 = 0,0.965925813,0,-0.258819073
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -618,7 +606,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,1mv.avionics.s0.1_4294383144,collider,0|0|0,0|0|-1,0|0|0
+	srfN = srfAttach,1mv.avionics.s0.1_4294261290,collider,0|0|0,0|0|-1,0|0|0
 	EVENTS
 	{
 	}
@@ -645,29 +633,23 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleDeployableAntenna
+		name = ModuleScienceExperiment
 		isEnabled = True
-		currentRotation = (0, 0, 0, 1)
-		storedAnimationTime = 0
-		storedAnimationSpeed = -10
-		deployState = RETRACTED
+		Deployed = False
+		Inoperable = False
+		cooldownToGo = 0
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ExtendPanelsAction
-			{
-				actionGroup = Custom01
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ExtendAction
+			DeployAction
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-			RetractAction
+			ResetAction
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
@@ -679,16 +661,91 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleDataTransmitter
+		name = KOSNameTag
 		isEnabled = True
-		xmitIncomplete = False
+		nameTag = 
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			StartTransmissionAction
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = 1mv.sensor.ion.trap.srf.1_4294260532
+	partName = Part
+	persistentId = 3336150789
+	pos = 0,14.3734961,0.306250095
+	attPos = 0,0,0
+	attPos0 = 0,-0.0015039444,0.306250095
+	rot = 0,1,0,0
+	attRot = 0,0,0,1
+	attRot0 = 0,1,0,0
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	srfN = srfAttach,1mv.avionics.s0.1_4294261290,collider,0|0|0,0|0|-1,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		cooldownToGo = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ResetAction
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
@@ -698,15 +755,31 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
-	part = 1mv.sensor.magnetometer.srf.1_4294378760
+	part = 1mv.sensor.magnetometer.srf.1_4294260334
 	partName = Part
-	persistentId = 197341298
-	pos = 0.0799983814,14.8446417,0.298557997
+	persistentId = 985400065
+	pos = 0.0802539587,14.2269478,0.29951182
 	attPos = 0,0,0
-	attPos0 = 0.0799983814,-0.155358315,0.298557997
+	attPos0 = 0.0802539587,-0.148052216,0.29951182
 	rot = -0.991444886,0,0.1305262,0
 	attRot = 0,0,-0.99999994,0
 	attRot0 = -0.991444886,0,0.1305262,0
@@ -725,7 +798,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,1mv.avionics.s0.1_4294383144,collider,0|0|0,0|0|-1,0|0|0
+	srfN = srfAttach,1mv.avionics.s0.1_4294261290,collider,0|0|0,0|0|-1,0|0|0
 	EVENTS
 	{
 	}
@@ -766,7 +839,7 @@ PART
 		{
 			ExtendPanelsAction
 			{
-				actionGroup = Custom01
+				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ExtendAction
@@ -828,18 +901,34 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
-	part = 1mv.sensor.ion.trap.srf.1_4294378506
+	part = 1mv.high.gain.antenna.srf.1_4294259842
 	partName = Part
-	persistentId = 2270468261
-	pos = 0.15490748,14.8431854,0.268307626
+	persistentId = 2196520614
+	pos = -2.67904845E-08,14.3903875,-0.306447417
 	attPos = 0,0,0
-	attPos0 = 0.15490748,-0.156814575,0.268307626
-	rot = 0,0.965925872,0,-0.258819073
+	attPos0 = -2.67904845E-08,0.0153875351,-0.306447417
+	rot = 0,0,0,-1
 	attRot = 0,0,0,1
-	attRot0 = 0,0.965925872,0,-0.258819073
+	attRot0 = 0,0,0,-1
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -855,7 +944,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,1mv.avionics.s0.1_4294383144,collider,0|0|0,0|0|-1,0|0|0
+	srfN = srfAttach,1mv.avionics.s0.1_4294261290,collider,0|0|0,0|0|-1,0|0|0
 	EVENTS
 	{
 	}
@@ -882,23 +971,29 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleScienceExperiment
+		name = ModuleDeployableAntenna
 		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		cooldownToGo = 0
+		currentRotation = (0, 0, 0, 1)
+		storedAnimationTime = 0
+		storedAnimationSpeed = 1
+		deployState = RETRACTED
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			DeployAction
+			ExtendPanelsAction
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-			ResetAction
+			ExtendAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			RetractAction
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
@@ -908,20 +1003,57 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleDataTransmitter
+		isEnabled = True
+		xmitIncomplete = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StartTransmissionAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
-	part = 1mv.sensor.ion.trap.srf.1_4294378320
+	part = 1mv.solar.srf.1_4294259246
 	partName = Part
-	persistentId = 2703321193
-	pos = 0.155975074,15.1396532,0.270156741
+	persistentId = 3291952059
+	pos = -0.299199283,14.4032946,0.0801702067
 	attPos = 0,0,0
-	attPos0 = 0.155975074,0.139653206,0.270156741
-	rot = 0,0.965925872,0,-0.258819073
-	attRot = 0,0,0,1
-	attRot0 = 0,0.965925872,0,-0.258819073
+	attPos0 = -0.299199283,0.0282945633,0.0801702067
+	rot = -0.560985565,-0.560985565,-0.430459291,-0.430459291
+	attRot = 0,0,-0.707106709,-0.707106709
+	attRot0 = -0.560985565,-0.560985565,-0.430459291,-0.430459291
 	mir = 1,1,1
-	symMethod = Radial
+	symMethod = Mirror
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = -1
@@ -935,7 +1067,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,1mv.avionics.s0.1_4294383144,collider,0|0|0,0|0|-1,0|0|0
+	srfN = srfAttach,1mv.avionics.s0.1_4294261290,collider,0|0|0,0|0|-1,0|0|0
 	EVENTS
 	{
 	}
@@ -962,23 +1094,31 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleScienceExperiment
+		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		cooldownToGo = 0
+		efficiencyMult = 1
+		launchUT = -1
+		currentRotation = (0.707106829, 0, 0, -0.707106829)
+		storedAnimationTime = 0
+		storedAnimationSpeed = 1
+		deployState = RETRACTED
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			DeployAction
+			ExtendPanelsAction
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-			ResetAction
+			ExtendAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			RetractAction
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
@@ -988,20 +1128,53 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModulePartVariants
+		isEnabled = True
+		useVariantMass = True
+		stagingEnabled = True
+		selectedVariant = variant2
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
-	part = 1mv.sensor.ion.trap.srf.1_4294378134
+	part = 1mv.solar.srf.1_4294258866
 	partName = Part
-	persistentId = 681151852
-	pos = 0,14.9983006,0.306761861
+	persistentId = 2421542998
+	pos = 0.299199283,14.4032946,0.0801702067
 	attPos = 0,0,0
-	attPos0 = 0,-0.00169944763,0.306761861
-	rot = 0,1,0,0
-	attRot = 0,0,0,1
-	attRot0 = 0,1,0,0
+	attPos0 = 0.299199283,0.0282945633,0.0801702067
+	rot = 0.560985565,-0.560985565,-0.430459291,0.430459291
+	attRot = 0,0,-0.707106709,-0.707106709
+	attRot0 = 0.560985565,-0.560985565,-0.430459291,0.430459291
 	mir = 1,1,1
-	symMethod = Radial
+	symMethod = Mirror
 	autostrutMode = Off
 	rigidAttachment = False
 	istg = -1
@@ -1015,7 +1188,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,1mv.avionics.s0.1_4294383144,collider,0|0|0,0|0|-1,0|0|0
+	srfN = srfAttach,1mv.avionics.s0.1_4294261290,collider,0|0|0,0|0|-1,0|0|0
 	EVENTS
 	{
 	}
@@ -1042,23 +1215,31 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleScienceExperiment
+		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		cooldownToGo = 0
+		efficiencyMult = 1
+		launchUT = -1
+		currentRotation = (0.707106829, 0, 0, -0.707106829)
+		storedAnimationTime = 0
+		storedAnimationSpeed = 1
+		deployState = RETRACTED
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			DeployAction
+			ExtendPanelsAction
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-			ResetAction
+			ExtendAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			RetractAction
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
@@ -1068,18 +1249,51 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModulePartVariants
+		isEnabled = True
+		useVariantMass = True
+		stagingEnabled = True
+		selectedVariant = variant4
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
-	part = 1mv.sensor.gravimeter.srf.1_4294377940
+	part = 1mv.sensor.thermometer.srf.1_4294256446
 	partName = Part
-	persistentId = 3169653492
-	pos = -0.155760482,14.9258471,0.269785076
+	persistentId = 1444423193
+	pos = -0.153955504,14.2944193,0.266658753
 	attPos = 0,0,0
-	attPos0 = -0.155760482,-0.0741529465,0.269785076
-	rot = 0,0.965925813,0,0.258819073
+	attPos0 = -0.153955504,-0.0805807114,0.266658753
+	rot = 0,0.965925872,0,0.258819073
 	attRot = 0,0,0,1
-	attRot0 = 0,0.965925813,0,0.258819073
+	attRot0 = 0,0.965925872,0,0.258819073
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -1095,7 +1309,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,1mv.avionics.s0.1_4294383144,collider,0|0|0,0|0|-1,0|0|0
+	srfN = srfAttach,1mv.avionics.s0.1_4294261290,collider,0|0|0,0|0|-1,0|0|0
 	EVENTS
 	{
 	}
@@ -1169,15 +1383,31 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
-	part = 1mv.sensor.cosmic.ray.detector.srf.1_4294377740
+	part = 1mv.sensor.cosmic.ray.detector.srf.1_4294256194
 	partName = Part
-	persistentId = 277533105
-	pos = -0.196873173,15.4549427,0.113664784
+	persistentId = 1354089794
+	pos = -0.197215796,14.8341007,0.113862596
 	attPos = 0,0,0
-	attPos0 = -0.196873173,-0.170057297,0.113664784
+	attPos0 = -0.197215796,-0.165899277,0.113862596
 	rot = -0.612372458,-0.612372458,-0.353553385,-0.353553385
 	attRot = 0,0,-0.707106709,-0.707106709
 	attRot0 = -0.612372458,-0.612372458,-0.353553385,-0.353553385
@@ -1196,7 +1426,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,1mv.sensor.visible.light.camera.s0.1_4294382804,collider,0|0|0,0|0|-1,0|0|0
+	srfN = srfAttach,1mv.sensor.visible.light.camera.s0.1_4294261720,collider,0|0|0,0|0|-1,0|0|0
 	EVENTS
 	{
 	}
@@ -1249,18 +1479,34 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
-	part = 1mv.sensor.accelerometer.srf.1_4294377320
+	part = 1mv.sensor.accelerometer.srf.1_4294255424
 	partName = Part
-	persistentId = 3731879583
-	pos = -0.0478327945,15.2875004,-0.271273077
+	persistentId = 2070056753
+	pos = -0.0770719945,14.8289881,-0.211753681
 	attPos = 0,0,0
-	attPos0 = -0.0478327945,0.287500381,-0.271273077
-	rot = -0.405579746,-0.405579746,0.579227984,-0.579227984
-	attRot = -0.122787811,0.122787811,-0.696364164,-0.696364164
-	attRot0 = -0.405579746,-0.405579746,0.579227984,-0.579227984
+	attPos0 = -0.0770719945,-0.171011925,-0.211753681
+	rot = -9.3428433E-08,9.3428433E-08,0.707106829,-0.707106829
+	attRot = 0.122787818,-0.122787818,-0.696364224,0.696364224
+	attRot0 = -9.3428433E-08,9.3428433E-08,0.707106829,-0.707106829
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -1276,7 +1522,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,1mv.avionics.s0.1_4294383144,collider,0|0|0,0|0|-1,0|0|0
+	srfN = srfAttach,1mv.sensor.visible.light.camera.s0.1_4294261720,collider,0|0|0,0|0|-1,0|0|0
 	EVENTS
 	{
 	}
@@ -1350,87 +1596,17 @@ PART
 		{
 		}
 	}
-}
-PART
-{
-	part = sp.rcs.srf.2_4294374098
-	partName = Part
-	persistentId = 3320183022
-	pos = -0.236021876,14.7317247,5.53353772E-08
-	attPos = 0,0.0192251205,4.12673771E-08
-	attPos0 = -0.236021876,-0.287500381,1.4068001E-08
-	rot = 0.49999997,-0.50000006,-0.50000006,-0.49999997
-	attRot = 0,0,-0.707106769,0.707106769
-	attRot0 = -0.5,0.5,0.5,0.5
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = sp.rcs.srf.2_4294373918
-	sym = sp.rcs.srf.2_4294373874
-	sym = sp.rcs.srf.2_4294373830
-	srfN = srfAttach,1mv.avionics.s0.1_4294383144,collider,0|0|0,0|0|-1,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
 	MODULE
 	{
-		name = ModuleRCSFX
+		name = KOSNameTag
 		isEnabled = True
-		rcsEnabled = True
-		thrustPercentage = 100
-		currentShowToggles = True
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		enableX = False
-		enableY = False
-		enableZ = False
-		useThrottle = False
-		fullThrust = True
-		stagingEnabled = False
+		nameTag = 
+		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -1439,270 +1615,12 @@ PART
 }
 PART
 {
-	part = sp.rcs.srf.2_4294373918
+	part = sp.rcs.srf.2_4294254082
 	partName = Part
-	persistentId = 1950103083
-	pos = 4.87696852E-08,14.7317247,0.236021861
-	attPos = 4.87696852E-08,0.0192251205,0
-	attPos0 = 4.96602182E-17,-0.287500381,0.236021861
-	rot = -4.21468478E-08,-0.707106829,-0.707106829,4.21468478E-08
-	attRot = 0,0,-0.707106769,0.707106769
-	attRot0 = 0,0.707106829,0.707106829,0
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = sp.rcs.srf.2_4294373874
-	sym = sp.rcs.srf.2_4294373830
-	sym = sp.rcs.srf.2_4294374098
-	srfN = srfAttach,1mv.avionics.s0.1_4294383144,collider,0|0|0,0|0|-1,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCSFX
-		isEnabled = True
-		rcsEnabled = True
-		thrustPercentage = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		enableX = False
-		enableY = False
-		enableZ = False
-		useThrottle = False
-		fullThrust = True
-		stagingEnabled = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = sp.rcs.srf.2_4294373874
-	partName = Part
-	persistentId = 3347487069
-	pos = 0.236021876,14.7317247,-3.47016886E-08
-	attPos = 0,0.0192251205,0
-	attPos0 = 0.236021876,-0.287500381,-3.47016886E-08
-	rot = 0.50000006,0.5,0.5,-0.50000006
-	attRot = 0,0,-0.707106769,0.707106769
-	attRot0 = 0.50000006,0.5,0.5,-0.50000006
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = sp.rcs.srf.2_4294373830
-	sym = sp.rcs.srf.2_4294374098
-	sym = sp.rcs.srf.2_4294373918
-	srfN = srfAttach,1mv.avionics.s0.1_4294383144,collider,0|0|0,0|0|-1,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCSFX
-		isEnabled = True
-		rcsEnabled = True
-		thrustPercentage = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		enableX = False
-		enableY = False
-		enableZ = False
-		useThrottle = False
-		fullThrust = True
-		stagingEnabled = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = sp.rcs.srf.2_4294373830
-	partName = Part
-	persistentId = 2908761256
-	pos = -2.06336868E-08,14.7317247,-0.236021861
-	attPos = 7.50231344E-09,0.0192251205,0
-	attPos0 = -2.81360002E-08,-0.287500381,-0.236021861
-	rot = 0.707106829,-4.21468478E-08,-4.21468478E-08,-0.707106829
-	attRot = 0,0,-0.707106769,0.707106769
-	attRot0 = 0.707106829,0,0,-0.707106829
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = sp.rcs.srf.2_4294374098
-	sym = sp.rcs.srf.2_4294373918
-	sym = sp.rcs.srf.2_4294373874
-	srfN = srfAttach,1mv.avionics.s0.1_4294383144,collider,0|0|0,0|0|-1,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCSFX
-		isEnabled = True
-		rcsEnabled = True
-		thrustPercentage = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		enableX = False
-		enableY = False
-		enableZ = False
-		useThrottle = False
-		fullThrust = True
-		stagingEnabled = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = sp.rcs.linear.srf.1_4294373146
-	partName = Part
-	persistentId = 3950097576
-	pos = -0.0398980416,14.7124996,0.0398980379
-	attPos = 0,0,0
-	attPos0 = -0.0398980416,-0.287500381,0.0398980379
+	persistentId = 2004942399
+	pos = 0,14.1130581,0.256212234
+	attPos = 0,0.0255584717,0
+	attPos0 = 0,-0.287500381,0.256212234
 	rot = 0,0.707106829,0.707106829,0
 	attRot = 0,0,0,1
 	attRot0 = 0,0.707106829,0.707106829,0
@@ -1721,10 +1639,418 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = sp.rcs.linear.srf.1_4294372582
-	sym = sp.rcs.linear.srf.1_4294372542
-	sym = sp.rcs.linear.srf.1_4294372502
-	srfN = srfAttach,1mv.avionics.s0.1_4294383144,collider,0|0|0,0|0|-1,0|0|0
+	sym = sp.rcs.srf.2_4294253896
+	sym = sp.rcs.srf.2_4294253850
+	sym = sp.rcs.srf.2_4294253804
+	srfN = srfAttach,1mv.avionics.s0.1_4294261290,collider,0|0|0,0|0|-1,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCSFX
+		isEnabled = True
+		rcsEnabled = True
+		thrustPercentage = 100
+		currentShowToggles = True
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		enableX = False
+		enableY = False
+		enableZ = False
+		useThrottle = False
+		fullThrust = True
+		stagingEnabled = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = sp.rcs.srf.2_4294253896
+	partName = Part
+	persistentId = 3081305822
+	pos = 0.256212205,14.1130581,1.52714392E-08
+	attPos = 0,0.0255584717,0
+	attPos0 = 0.256212205,-0.287500381,1.52714392E-08
+	rot = 0.5,0.5,0.5,-0.5
+	attRot = 0,0,0,1
+	attRot0 = 0.5,0.5,0.5,-0.5
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = sp.rcs.srf.2_4294253850
+	sym = sp.rcs.srf.2_4294253804
+	sym = sp.rcs.srf.2_4294254082
+	srfN = srfAttach,1mv.avionics.s0.1_4294261290,collider,0|0|0,0|0|-1,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCSFX
+		isEnabled = True
+		rcsEnabled = True
+		thrustPercentage = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		enableX = False
+		enableY = False
+		enableZ = False
+		useThrottle = False
+		fullThrust = True
+		stagingEnabled = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = sp.rcs.srf.2_4294253850
+	partName = Part
+	persistentId = 1265560492
+	pos = -2.2398785E-08,14.1130581,-0.256212234
+	attPos = 0,0.0255584717,0
+	attPos0 = -2.2398785E-08,-0.287500381,-0.256212234
+	rot = 0.707106829,-3.09086197E-08,-3.09086197E-08,-0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0.707106829,-3.09086197E-08,-3.09086197E-08,-0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = sp.rcs.srf.2_4294253804
+	sym = sp.rcs.srf.2_4294254082
+	sym = sp.rcs.srf.2_4294253896
+	srfN = srfAttach,1mv.avionics.s0.1_4294261290,collider,0|0|0,0|0|-1,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCSFX
+		isEnabled = True
+		rcsEnabled = True
+		thrustPercentage = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		enableX = False
+		enableY = False
+		enableZ = False
+		useThrottle = False
+		fullThrust = True
+		stagingEnabled = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = sp.rcs.srf.2_4294253804
+	partName = Part
+	persistentId = 2436419333
+	pos = -0.256212205,14.1130581,1.52714392E-08
+	attPos = 0,0.0255584717,0
+	attPos0 = -0.256212205,-0.287500381,1.52714392E-08
+	rot = 0.5,-0.5,-0.5,-0.5
+	attRot = 0,0,0,1
+	attRot0 = 0.5,-0.5,-0.5,-0.5
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = sp.rcs.srf.2_4294254082
+	sym = sp.rcs.srf.2_4294253896
+	sym = sp.rcs.srf.2_4294253850
+	srfN = srfAttach,1mv.avionics.s0.1_4294261290,collider,0|0|0,0|0|-1,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCSFX
+		isEnabled = True
+		rcsEnabled = True
+		thrustPercentage = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		enableX = False
+		enableY = False
+		enableZ = False
+		useThrottle = False
+		fullThrust = True
+		stagingEnabled = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = sp.rcs.linear.srf.1_4294252876
+	partName = Part
+	persistentId = 1487446883
+	pos = -0.0366403349,14.0874996,0.0366403274
+	attPos = 0,0,0
+	attPos0 = -0.0366403349,-0.287500381,0.0366403274
+	rot = 0,0.707106829,0.707106829,0
+	attRot = 0,0,0,1
+	attRot0 = 0,0.707106829,0.707106829,0
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = sp.rcs.linear.srf.1_4294252832
+	sym = sp.rcs.linear.srf.1_4294252790
+	sym = sp.rcs.linear.srf.1_4294252748
+	srfN = srfAttach,1mv.avionics.s0.1_4294261290,collider,0|0|0,0|0|-1,0|0|0
 	EVENTS
 	{
 	}
@@ -1780,15 +2106,31 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
-	part = sp.rcs.linear.srf.1_4294372582
+	part = sp.rcs.linear.srf.1_4294252832
 	partName = Part
-	persistentId = 3348674421
-	pos = 0.0398980342,14.7124996,0.0398980416
+	persistentId = 2123182968
+	pos = 0.0366403237,14.0874996,0.0366403349
 	attPos = 0,0,0
-	attPos0 = 0.0398980342,-0.287500381,0.0398980416
+	attPos0 = 0.0366403237,-0.287500381,0.0366403349
 	rot = 0.5,0.5,0.5,-0.5
 	attRot = 0,0,0,1
 	attRot0 = 0.5,0.5,0.5,-0.5
@@ -1807,10 +2149,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = sp.rcs.linear.srf.1_4294372542
-	sym = sp.rcs.linear.srf.1_4294372502
-	sym = sp.rcs.linear.srf.1_4294373146
-	srfN = srfAttach,1mv.avionics.s0.1_4294383144,collider,0|0|0,0|0|-1,0|0|0
+	sym = sp.rcs.linear.srf.1_4294252790
+	sym = sp.rcs.linear.srf.1_4294252748
+	sym = sp.rcs.linear.srf.1_4294252876
+	srfN = srfAttach,1mv.avionics.s0.1_4294261290,collider,0|0|0,0|0|-1,0|0|0
 	EVENTS
 	{
 	}
@@ -1866,15 +2208,31 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
-	part = sp.rcs.linear.srf.1_4294372542
+	part = sp.rcs.linear.srf.1_4294252790
 	partName = Part
-	persistentId = 533965031
-	pos = 0.0398980379,14.7124996,-0.0398980416
+	persistentId = 591337583
+	pos = 0.0366403311,14.0874996,-0.0366403311
 	attPos = 0,0,0
-	attPos0 = 0.0398980379,-0.287500381,-0.0398980416
+	attPos0 = 0.0366403311,-0.287500381,-0.0366403311
 	rot = 0.707106829,-3.09086197E-08,-3.09086197E-08,-0.707106829
 	attRot = 0,0,0,1
 	attRot0 = 0.707106829,-3.09086197E-08,-3.09086197E-08,-0.707106829
@@ -1893,10 +2251,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = sp.rcs.linear.srf.1_4294372502
-	sym = sp.rcs.linear.srf.1_4294373146
-	sym = sp.rcs.linear.srf.1_4294372582
-	srfN = srfAttach,1mv.avionics.s0.1_4294383144,collider,0|0|0,0|0|-1,0|0|0
+	sym = sp.rcs.linear.srf.1_4294252748
+	sym = sp.rcs.linear.srf.1_4294252876
+	sym = sp.rcs.linear.srf.1_4294252832
+	srfN = srfAttach,1mv.avionics.s0.1_4294261290,collider,0|0|0,0|0|-1,0|0|0
 	EVENTS
 	{
 	}
@@ -1952,15 +2310,31 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
-	part = sp.rcs.linear.srf.1_4294372502
+	part = sp.rcs.linear.srf.1_4294252748
 	partName = Part
-	persistentId = 4198307592
-	pos = -0.0398980379,14.7124996,-0.0398980379
+	persistentId = 2352977813
+	pos = -0.0366403274,14.0874996,-0.0366403311
 	attPos = 0,0,0
-	attPos0 = -0.0398980379,-0.287500381,-0.0398980379
+	attPos0 = -0.0366403274,-0.287500381,-0.0366403311
 	rot = 0.5,-0.5,-0.5,-0.5
 	attRot = 0,0,0,1
 	attRot0 = 0.5,-0.5,-0.5,-0.5
@@ -1979,10 +2353,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = sp.rcs.linear.srf.1_4294373146
-	sym = sp.rcs.linear.srf.1_4294372582
-	sym = sp.rcs.linear.srf.1_4294372542
-	srfN = srfAttach,1mv.avionics.s0.1_4294383144,collider,0|0|0,0|0|-1,0|0|0
+	sym = sp.rcs.linear.srf.1_4294252876
+	sym = sp.rcs.linear.srf.1_4294252832
+	sym = sp.rcs.linear.srf.1_4294252790
+	srfN = srfAttach,1mv.avionics.s0.1_4294261290,collider,0|0|0,0|0|-1,0|0|0
 	EVENTS
 	{
 	}
@@ -2033,6 +2407,22 @@ PART
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
