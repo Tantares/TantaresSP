@@ -1,6 +1,7 @@
 Tantares Space Probes / TantaresSP
-Version 1.0
+Version 2.0
 
-Initial release, place the TantaresSP folder into KSP/GameData to use. Have fun!
+- 4MV orbiter and lander.
 
+Place the TantaresSP folder into KSP/GameData to use. Have fun!
 TantaresSP is distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
