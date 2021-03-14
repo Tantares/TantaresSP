@@ -1,0 +1,23 @@
+{
+	"NAME": "Tantares SP",
+	"URL": "https://raw.githubusercontent.com/HebaruSan/Astrogator/master/Astrogator.version",
+	"DOWNLOAD" : "https://github.com/Tantares/TantaresSP/releases",
+	"GITHUB": {
+		"USERNAME": "Tantares",
+		"REPOSITORY": "TantaresSP",
+		"ALLOW_PRE_RELEASE": false
+	},
+	"VERSION": {
+		"MAJOR": 0,
+		"MINOR": 10,
+		"PATCH": 2
+	},
+	"KSP_VERSION_MIN": {
+		"MAJOR": 1,
+		"MINOR": 8
+	},
+	"KSP_VERSION_MAX": {
+		"MAJOR": 1,
+		"MINOR": 11
+	}
+}
