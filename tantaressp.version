@@ -1,6 +1,6 @@
 {
 	"NAME": "Tantares SP",
-	"URL": "https://raw.githubusercontent.com/HebaruSan/Astrogator/master/Astrogator.version",
+	"URL": "https://forum.kerbalspaceprogram.com/index.php?/topic/73686-111x-tantares-stockalike-soyuz-and-mir-2402122021/",
 	"DOWNLOAD" : "https://github.com/Tantares/TantaresSP/releases",
 	"GITHUB": {
 		"USERNAME": "Tantares",
@@ -8,16 +8,24 @@
 		"ALLOW_PRE_RELEASE": false
 	},
 	"VERSION": {
-		"MAJOR": 0,
-		"MINOR": 10,
-		"PATCH": 2
+		"MAJOR": 4,
+		"MINOR": 0,
+		"PATCH": 0
 	},
-	"KSP_VERSION_MIN": {
-		"MAJOR": 1,
-		"MINOR": 8
-	},
-	"KSP_VERSION_MAX": {
-		"MAJOR": 1,
-		"MINOR": 11
-	}
+	"KSP_VERSION":
+    {
+        "MAJOR":1,
+        "MINOR":11,
+        "PATCH":1
+    },
+    "KSP_VERSION_MIN":{
+        "MAJOR":1,
+        "MINOR":10,
+        "PATCH":1
+    },
+    "KSP_VERSION_MAX":{
+        "MAJOR":1,
+        "MINOR":11,
+        "PATCH":99
+    }
 }

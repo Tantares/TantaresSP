@@ -1,7 +1,8 @@
 Tantares Space Probes / TantaresSP
-Version 3.0
+Version 4.0
 
-- 1F "Fobos" Orbiter
+- YE-8-5 Luna Sample Return (Luna 16, 20, 24)
+- YE-8 Lunokhod Rover
 
 Place the TantaresSP folder into KSP/GameData to use. Have fun!
 TantaresSP is distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
