@@ -1,8 +1,7 @@
 Tantares Space Probes / TantaresSP
-Version 5.0
+Version 6.0
 
-- YE1A / Luna 2 Probe
-- YE2A / Luna 3 Probe
+- 2MV, 3MV Probe (e.g. Venera-8).
 - Bugfixes.
 
 Place the TantaresSP folder into KSP/GameData to use. Have fun!
